@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="msg-container hide">
+        <p id="msg">Winner</p>
+        <div class="gif">
+            <button id="new-btn">New Game</button>
+        </div>
+    </div>
+    <div class="draw-container hide">
+        <p id="draw">Game Was Draw Try Again</p>
+        <button id="draw-btn">Start Again</button>
+    </div>
+    <div class="all">
+    <header>
+        <h1>Tic Tac Toe Game</h1>
+        <h3 id="turn">Turn of O</h3>
+    </header>
+    <div class="container">
+    <div class="game">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+    </div>
+    </div>
+    <audio src="ting.mp3" class="hide" id="ting"></audio>
+    <audio src="music.mp3" class="hide" id="music"></audio>
+    <audio src="gameover.mp3" class="hide" id="gameover"></audio>
+    <div class="btn">
+        <button id="btn">Reset Game</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

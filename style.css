@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #548687;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+h1::after, h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    background-image: conic-gradient(from var(--angle), transparent 70%, #ff4545, #006aff, #ff0095);
+    animation: 0.5s spin linear infinite;
+}
+
+/* background-image: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545); */
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+h1::before{
+    filter: blur(0.5rem);
+    opacity: 0.5;
+}
+
+
+h1{
+    margin-top: 90px;
+    font-size: 38px;
+    width: 80%;
+    background-color: #ff4545;
+    color: #00ff99;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+#turn {
+    font-size: 30px;
+    padding: 5px;
+    width: 200px;
+    background-color: yellow;
+    color: green;
+    text-align: center;
+    margin-top: 50px;
+}
+.game {
+    height: 90vmin;
+    width: 90vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+    margin-top: 50px;
+}
+.box {
+    height: 27vmin;
+    width: 27vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    font-size: 14vmin;
+    color: #ff4545;
+    background-color: #ffffc7;
+    transition: 0.3s ease-in-out;
+}
+.box:hover{
+    background-color: rgb(217, 180, 252);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn button {
+   padding: 15px;
+   background-color: #ff4545;
+   color: #00ff99;
+   border-radius: 12px;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.3);
+   font-size: 2rem;
+   margin-bottom: 40px;
+   font-weight: 600;
+   margin-top: 50px;
+}
+.btn button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+#new-btn {
+    padding: 10px 20px;
+   background-color: rgb(255, 255, 255); 
+   color: #15eaf1;
+   border-radius: 12px;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.3);
+   font-size: 1.5rem;
+   font-weight: 800;
+   margin-top: 330px;
+}
+#new-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+#msg {
+    font-size: 8vmin;
+    color: #15eaf1;
+    font-weight: 800;
+    margin-top: 150px;
+    width: 80%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+#msg::before, #msg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    background-image: conic-gradient(from var(--angle), transparent 70%, #ff4545, #006aff, #ff0095);
+    animation: 0.5s spin linear infinite;
+}
+.msg-container {
+    font-size: 30vmin;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.gif {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(giphy.gif);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.hide {
+    display: none;
+}
+.draw-container {
+    font-size: 30vmin;
+    height: 100vh;
+}
+#draw {
+    font-size: 8vmin;
+    color: #15eaf1;
+    margin-top: 200px;
+    font-weight: 800;
+}
+#draw-btn {
+    padding: 10px;
+   background-color: rgb(255, 255, 255); 
+   color: #15eaf1;
+   border-radius: 12px;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.3);
+   font-size: 1.5rem;
+   margin-top: 100px;
+   font-weight: 800;
+}
